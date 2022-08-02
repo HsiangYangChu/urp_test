@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 96195de2bd2ce41638a8f6b331196273
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ubuntu Mono derivative Powerline
+  fontNames:
+  - Ubuntu Mono derivative Powerline
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4b8b6f65a879a465bbb73a90d92b30be, type: 3}
+  - {fileID: 12800000, guid: 1cb0cbd5af1734707bb6585eefac9066, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

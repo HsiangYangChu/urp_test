@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 747b6f1ec4535470da8f1e8298b00fcb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Roboto Mono for Powerline
+  fontNames:
+  - Roboto Mono for Powerline
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 057c6bb743385437e9a2cad8044b92c9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
