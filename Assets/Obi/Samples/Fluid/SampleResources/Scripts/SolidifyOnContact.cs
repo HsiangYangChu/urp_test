@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using Obi;
+// using System.Random
+// using System.Collections.Generic;
 
 [RequireComponent(typeof(ObiSolver))]
 public class SolidifyOnContact : MonoBehaviour
@@ -16,6 +18,13 @@ public class SolidifyOnContact : MonoBehaviour
             this.localPos = Vector3.zero;
         }
     };
+
+    public Color paintColor;
+    
+    public float minRadius = 0.05f;
+    public float maxRadius = 0.2f;
+    public float strength = 1;
+    public float hardness = 1;
 
     ObiSolver solver;
     public Color solidColor;
@@ -54,9 +63,13 @@ public class SolidifyOnContact : MonoBehaviour
 			{
 				var col = colliderWorld.colliderHandles[e.contacts.Data[i].bodyB].owner;
                 if (col.gameObject.name == "Slime_Yellow"){
-                    // Destroy(col.gameObject);
                     UnityEngine.AI.NavMeshAgent nav = col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
                     nav.speed = 0.0f;
+                }
+
+                if (col.gameObject.name == "testShading"){
+                    Paintable p = col.gameObject.GetComponent<Paintable>();
+                    Paint(solver.simplices[e.contacts.Data[i].bodyA], new SolidData(col.transform), p);
                 }
                 Debug.Log(col.gameObject.name);
                 // Solidify(solver.simplices[e.contacts.Data[i].bodyA], new SolidData(col.transform));
@@ -109,5 +122,17 @@ public class SolidifyOnContact : MonoBehaviour
         solid.localPos = solid.reference.InverseTransformPoint(solver.transform.TransformPoint(solver.positions[particleIndex]));
         Debug.Log(solid.localPos);
         solids[particleIndex] = solid;
+    }
+
+
+    void Paint(int particleIndex, SolidData solid, Paintable p){
+        Debug.Log("in Paint!");
+        Vector3 pos = solid.reference.InverseTransformPoint(solver.transform.TransformPoint(solver.positions[particleIndex]));
+        // pos = new Vector3(11.44f, -0.17f, -11.221f);
+        // float radius = Random.Range(minRadius, maxRadius);
+        float radius = maxRadius;
+        Debug.Log("this is p:  "+pos);
+        // Debug.Log(p);
+        PaintManager.instance.paint(p, pos, radius, hardness, strength, paintColor);
     }
 }
