@@ -25,6 +25,7 @@ public class SolidifyOnContact : MonoBehaviour
     public float maxRadius = 0.2f;
     public float strength = 1;
     public float hardness = 1;
+    public GameObject decalPrefab;
 
     ObiSolver solver;
     public Color solidColor;
@@ -61,16 +62,21 @@ public class SolidifyOnContact : MonoBehaviour
 		{
 			if (e.contacts.Data[i].distance < 0.001f)
 			{
+
+
 				var col = colliderWorld.colliderHandles[e.contacts.Data[i].bodyB].owner;
                 if (col.gameObject.name == "Slime_Yellow"){
                     UnityEngine.AI.NavMeshAgent nav = col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
                     nav.speed = 0.0f;
                 }
 
-                if (col.gameObject.name == "testShading"){
-                    Paintable p = col.gameObject.GetComponent<Paintable>();
-                    Paint(solver.simplices[e.contacts.Data[i].bodyA], new SolidData(col.transform), p);
-                }
+                // if (col.gameObject.name == "Planks"){
+                //     int particleIndex = solver.simplices[e.contacts.Data[i].bodyA];
+                //     var position = solver.positions[particleIndex];
+                //     Vector3 pos = new Vector3(position.x, position.y, position.z);
+                //     Debug.Log(pos);
+                //     Instantiate(decalPrefab, pos, Quaternion.Euler(90f, 0f, 0f));
+                // }
                 Debug.Log(col.gameObject.name);
                 // Solidify(solver.simplices[e.contacts.Data[i].bodyA], new SolidData(col.transform));
 			}
@@ -130,6 +136,7 @@ public class SolidifyOnContact : MonoBehaviour
         Vector3 pos = solid.reference.InverseTransformPoint(solver.transform.TransformPoint(solver.positions[particleIndex]));
         // pos = new Vector3(11.44f, -0.17f, -11.221f);
         // float radius = Random.Range(minRadius, maxRadius);
+        Instantiate(decalPrefab, pos, Quaternion.Euler(90f, 0f, 0f));
         float radius = maxRadius;
         Debug.Log("this is p:  "+pos);
         // Debug.Log(p);
