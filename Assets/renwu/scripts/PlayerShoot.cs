@@ -83,8 +83,6 @@ public class PlayerShoot : MonoBehaviour {
         if(bullet.name == "Sphere")
         {
             // Debug.Log("Fire:");
-
-            // Debug.Log("sdkjhskjdfhkjshakjfhlkjashfshdkjfhkjdshfkjhskjfdhkjdshkjfhsdkjfhkjshdfkjshdkjfhdskjfhkjsdhfkjdshkjfhdskjfjh");
             Transform b = Instantiate(bullet, firePos.position, transform.rotation);
             //  if(b)
             b.gameObject.GetComponent<Rigidbody>().AddForce(b.forward * 2000);
@@ -138,32 +136,10 @@ public class PlayerShoot : MonoBehaviour {
         gunParticle.transform.position = part.position;
         gunParticle.Stop();
         gunParticle.Play();
-
-        /*shootRay.origin = transform.position;
-        shootRay.direction = transform.forward;
-        if (Physics.Raycast(shootRay, out shootHit, range, shootMask))
-        {
-            enemyHealth enemyhealth = shootHit.collider.GetComponent<enemyHealth>();
-            Debug.Log(shootHit.collider.transform.name + "受伤!!!");
-            if (enemyhealth != null)
-            {
-                //Debug.Log(shootHit.collider.transform.name + "受伤!!!");
-                enemyhealth.TakeDamage(damage,shootHit.point);
-            }
-        }*/
     }
 
     // Update is called once per frame
     void Update () {
-        /*timer += Time.deltaTime;
-        if(Input.GetMouseButton(0) && timer >= timeBetweenBullet)
-        {
-            Fire();
-        }else if(timer >= timeBetweenBullet)
-        {
-            timer = 0;
-        }*/
-
         if (Input.GetMouseButton(0))
         {
             shoot += Time.deltaTime;

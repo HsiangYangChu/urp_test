@@ -11,7 +11,7 @@ public class jiaxueBorn : MonoBehaviour
     private int patrolIndex = 0;
 
     public GameObject gameobject;
-    public static float bornTime = 120f;
+    public static float bornTime = 6f;
 
     public static bool flagblood = false;
 

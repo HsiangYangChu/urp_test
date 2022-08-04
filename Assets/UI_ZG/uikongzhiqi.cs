@@ -22,12 +22,12 @@ public class uikongzhiqi : MonoBehaviour
         //场景间传递参数
         GlobalControl.Instance.enemy = 9f;
         GlobalControl.Instance.boss = 50f;
-        GlobalControl.Instance.move = 10f;
-        GlobalControl.Instance.bing = 40f;
-        GlobalControl.Instance.huo = 50f;
-        GlobalControl.Instance.gao = 60f;
-        GlobalControl.Instance.dilei = 40f;
-        GlobalControl.Instance.jiaxue = 80f;
+        GlobalControl.Instance.move = 15f;
+        GlobalControl.Instance.bing = 15f;
+        GlobalControl.Instance.huo = 16f;
+        GlobalControl.Instance.gao = 17f;
+        GlobalControl.Instance.dilei = 20f;
+        GlobalControl.Instance.jiaxue = 40f;
 
         sli.value = 10f;
         GlobalControl.Instance.volume = sli.value;
@@ -69,22 +69,14 @@ public class uikongzhiqi : MonoBehaviour
         if(rk == 0)
         {
             Debug.Log("点击简单");
-            /*enemyManager.bornTime = 10f;
-            BossManager.bornTime = 60f;
-            Move.playerSpeed = 5f;
-            BingbulletBorn.bornTime = 40f;
-            HuobulletBorn.bornTime = 60f;
-            GaobulletBorn.bornTime = 100f;
-            dileiBorn.bornTime = 60f;
-            jiaxueBorn.bornTime = 120f;*/
             GlobalControl.Instance.enemy = 9f;
             GlobalControl.Instance.boss = 50f;
-            GlobalControl.Instance.move = 10f;
-            GlobalControl.Instance.bing = 40f;
-            GlobalControl.Instance.huo = 50f;
-            GlobalControl.Instance.gao = 60f;
-            GlobalControl.Instance.dilei = 40f;
-            GlobalControl.Instance.jiaxue = 80f;
+            GlobalControl.Instance.move = 15f;
+            GlobalControl.Instance.bing = 15f;
+            GlobalControl.Instance.huo = 16f;
+            GlobalControl.Instance.gao = 17f;
+            GlobalControl.Instance.dilei = 20f;
+            GlobalControl.Instance.jiaxue = 40f;
         }
         else if(rk == 1)
         {
@@ -97,14 +89,14 @@ public class uikongzhiqi : MonoBehaviour
             GaobulletBorn.bornTime = 110f;
             dileiBorn.bornTime = 70f;
             jiaxueBorn.bornTime = 100f;*/
-            GlobalControl.Instance.enemy = 7f;
+            GlobalControl.Instance.enemy = 8f;
             GlobalControl.Instance.boss = 40f;
             GlobalControl.Instance.move = 10f;
-            GlobalControl.Instance.bing = 40f;
-            GlobalControl.Instance.huo = 50f;
-            GlobalControl.Instance.gao = 70f;
-            GlobalControl.Instance.dilei = 40f;
-            GlobalControl.Instance.jiaxue = 70f;
+            GlobalControl.Instance.bing = 20f;
+            GlobalControl.Instance.huo = 22f;
+            GlobalControl.Instance.gao = 24f;
+            GlobalControl.Instance.dilei = 25f;
+            GlobalControl.Instance.jiaxue = 45f;
         }
         else if(rk == 2)
         {
@@ -117,14 +109,14 @@ public class uikongzhiqi : MonoBehaviour
             GaobulletBorn.bornTime = 80f;
             dileiBorn.bornTime = 30f;
             jiaxueBorn.bornTime = 50f;*/
-            GlobalControl.Instance.enemy = 4f;
+            GlobalControl.Instance.enemy = 7f;
             GlobalControl.Instance.boss = 30f;
-            GlobalControl.Instance.move = 10f;
-            GlobalControl.Instance.bing = 20f;
-            GlobalControl.Instance.huo = 30f;
-            GlobalControl.Instance.gao = 40f;
-            GlobalControl.Instance.dilei = 20f;
-            GlobalControl.Instance.jiaxue = 40f;
+            GlobalControl.Instance.move = 8f;
+            GlobalControl.Instance.bing = 25f;
+            GlobalControl.Instance.huo = 27f;
+            GlobalControl.Instance.gao = 29f;
+            GlobalControl.Instance.dilei = 30f;
+            GlobalControl.Instance.jiaxue = 50f;
         }
     }
 

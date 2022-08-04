@@ -65,7 +65,7 @@ public class SolidifyOnContact : MonoBehaviour
 
 
 				var col = colliderWorld.colliderHandles[e.contacts.Data[i].bodyB].owner;
-                if (col.gameObject.name == "Slime_Yellow"){
+                if (col.gameObject.tag == "enemy"){
                     UnityEngine.AI.NavMeshAgent nav = col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
                     nav.speed = 0.0f;
                 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossManager : MonoBehaviour
 {
     public GameObject enemy;
-    public static float bornTime = 80f;
+    public static float bornTime = 8f;
     public Transform bornPos;
 
     // Use this for initialization
