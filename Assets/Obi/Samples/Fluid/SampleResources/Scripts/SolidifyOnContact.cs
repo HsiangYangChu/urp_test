@@ -68,6 +68,11 @@ public class SolidifyOnContact : MonoBehaviour
                 if (col.gameObject.tag == "enemy"){
                     UnityEngine.AI.NavMeshAgent nav = col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
                     nav.speed = 0.0f;
+                    // Destroy(col.gameObject.GetComponent<UnityEngine.Animator>());
+                }
+                if (col.gameObject.tag == "Player"){
+                    Move.playerSpeed = 0.0f;
+                    
                 }
 
                 // if (col.gameObject.name == "Planks"){

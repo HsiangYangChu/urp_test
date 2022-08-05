@@ -20,7 +20,7 @@ public class uikongzhiqi : MonoBehaviour
     {
         rk = 0;
         //场景间传递参数
-        GlobalControl.Instance.enemy = 20f;
+        GlobalControl.Instance.enemy = 9f;
         GlobalControl.Instance.boss = 50f;
         GlobalControl.Instance.move = 15f;
         GlobalControl.Instance.bing = 15f;

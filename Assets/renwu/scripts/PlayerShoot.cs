@@ -65,10 +65,8 @@ public class PlayerShoot : MonoBehaviour {
 
     public void Fire()
     {
-        Debug.Log("Fire:");
 
         if(usingGlue == 1){
-            Debug.Log("nishigehaoren");
             emitter.transform.position = firePos4.position;
             emitter.transform.rotation = transform.rotation;
             weapon.gameObject.SetActive(false);
@@ -82,9 +80,7 @@ public class PlayerShoot : MonoBehaviour {
 
         if(bullet.name == "Sphere")
         {
-            // Debug.Log("Fire:");
             Transform b = Instantiate(bullet, firePos.position, transform.rotation);
-            //  if(b)
             b.gameObject.GetComponent<Rigidbody>().AddForce(b.forward * 2000);
             weapon.gameObject.SetActive(true);
             weapon1.gameObject.SetActive(false);
@@ -95,7 +91,6 @@ public class PlayerShoot : MonoBehaviour {
         }else if(bullet.name == "Bullet_GoldFire_Small_Projectile")
         {
             Transform b = Instantiate(bullet, firePos1.position, transform.rotation);
-            //  if(b)
             b.gameObject.GetComponent<Rigidbody>().AddForce(b.forward * 2000);
             weapon.gameObject.SetActive(false);
             weapon1.gameObject.SetActive(true);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemyManager : MonoBehaviour {
     public GameObject enemy;
-    public static float bornTime = 30f;
+    public static float bornTime = 10f;
     public Transform bornPos;
 
 	// Use this for initialization

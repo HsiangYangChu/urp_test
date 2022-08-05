@@ -40,7 +40,6 @@ public class PlayerDaoju : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (flag != 0){
-            // Destroy(other.gameObject);
             return;
         }
         //碰到胶水
