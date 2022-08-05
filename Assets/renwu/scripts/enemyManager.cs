@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class enemyManager : MonoBehaviour {
     public GameObject enemy;
-    public static float bornTime = 9f;
+    public static float bornTime = 30f;
     public Transform bornPos;
 
 	// Use this for initialization
 	void Start () {
-        Instantiate(enemy, bornPos.position, bornPos.rotation);
-        InvokeRepeating("Born", bornTime, bornTime);
+        // Instantiate(enemy, bornPos.position, bornPos.rotation); 
+        InvokeRepeating("Born", 7, bornTime);
         //Invoke("Born", bornTime);
 	}
 	

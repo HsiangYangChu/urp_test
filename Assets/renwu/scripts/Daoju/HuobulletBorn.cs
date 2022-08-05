@@ -11,7 +11,7 @@ public class HuobulletBorn : MonoBehaviour
     private int patrolIndex = 0;
 
     public GameObject gameobject;
-    public static float bornTime = 70f;
+    public static float bornTime = 15f;
 
     public static bool flaghuo = false;
 

@@ -24,8 +24,9 @@ public class Move : MonoBehaviour {
         float v = Input.GetAxisRaw("Vertical");
         Vector3 moveVec = new Vector3(h, 0, v);
         Vector3 norm = moveVec.normalized;
-        Debug.Log(norm);
         moveVec = transform.position + moveVec.normalized * playerSpeed * Time.deltaTime;
+        Debug.Log("playerSpeed: " + playerSpeed);
+        
         playerRigidbody.MovePosition(moveVec);
 
         //旋转
