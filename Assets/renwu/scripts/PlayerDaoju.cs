@@ -39,33 +39,43 @@ public class PlayerDaoju : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //胶水测试
+        if (flag != 0){
+            // Destroy(other.gameObject);
+            return;
+        }
+        //碰到胶水
         if (other.tag == "glue"){
-            Debug.Log("danzihaoda");
             if (flag != 0)
                 destory();
             playershoot.usingGlue = 1;
-            Invoke("resume", 20f);
-            Destroy(other.gameObject);
-        }
-        //碰到火子弹
-        if(other.tag == "huo")
-        {
-            if (flag != 0)
-                destory();
-            HuobulletBorn.flaghuo = false;
-            playershoot.bullet = huobullet;
-            Invoke("resume", 15f);
+            Invoke("resume", 10f);
             /*
             加特效 
             */
             fxhuo = Instantiate(Resources.Load("SpinningFire")) as GameObject;
             fxhuo.transform.position = transform.position;
             flag = 1;
-            Invoke("destory", 14f);
-
+            Invoke("destory", 10f);
             Destroy(other.gameObject);
         }
+        //碰到火子弹
+        // if(other.tag == "huo")
+        // {
+        //     if (flag != 0)
+        //         destory();
+        //     HuobulletBorn.flaghuo = false;
+        //     playershoot.bullet = huobullet;
+        //     Invoke("resume", 15f);
+        //     /*
+        //     加特效 
+        //     */
+        //     fxhuo = Instantiate(Resources.Load("SpinningFire")) as GameObject;
+        //     fxhuo.transform.position = transform.position;
+        //     flag = 1;
+        //     Invoke("destory", 14f);
+
+        //     Destroy(other.gameObject);
+        // }
         //碰到冰子弹
         if(other.tag == "bing")
         {
@@ -80,7 +90,7 @@ public class PlayerDaoju : MonoBehaviour
             fxbing = Instantiate(Resources.Load("SpinningModular")) as GameObject;
             fxbing.transform.position = transform.position;
             flag = 2;
-            Invoke("destory", 9f);
+            Invoke("destory", 10f);
 
             Destroy(other.gameObject);
         }
@@ -98,7 +108,7 @@ public class PlayerDaoju : MonoBehaviour
             fxgao = Instantiate(Resources.Load("SpinningLife")) as GameObject;
             fxgao.transform.position = transform.position;
             flag = 3;
-            Invoke("destory", 9f);
+            Invoke("destory", 10f);
 
             Destroy(other.gameObject);
         }
